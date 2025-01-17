@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "htmlhint": "^1.1.4",
+    "htmlhint": "^1.1.4"
+  },
+  "devDependencies": {
     "stylelint": "^16.13.2"
   }
 }
