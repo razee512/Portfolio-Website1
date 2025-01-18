@@ -12,12 +12,11 @@
     "htmlhint": "^1.1.4"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
+
 
     "htmlhint": "^1.1.4",
 
->>>>>>> 1ef129164488a42d4e8e5b7a1b14b376be4b76a8
+
     "stylelint": "^16.13.2"
   }
 }
