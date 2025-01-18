@@ -12,6 +12,11 @@
     "htmlhint": "^1.1.4"
   },
   "devDependencies": {
+
+
+    "htmlhint": "^1.1.4",
+
+
     "stylelint": "^16.13.2"
   }
 }
