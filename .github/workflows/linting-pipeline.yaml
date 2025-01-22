@@ -17,10 +17,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install dependencies
-        run: npm install -g htmlhint stylelint
+        run: npm install
+
+      - name: Debug Stylelint configuration
+        run: npx stylelint --print-config "styles/**/*.css"
 
       - name: Lint HTML files
         run: htmlhint "src/**/*.html"
 
       - name: Lint CSS files
-        run: stylelint "styles/**/*.css"
+        run: npx stylelint "styles/**/*.css" --config .stylelintrc.json
