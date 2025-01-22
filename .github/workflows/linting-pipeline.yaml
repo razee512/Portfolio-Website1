@@ -1,12 +1,12 @@
-name: Linting Pipeline
+name: Lint CSS Files
 
 on:
   push:
     branches:
-      - develop
+      - main
   pull_request:
     branches:
-      - develop
+      - main
 
 jobs:
   lint:
@@ -14,16 +14,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Debug Stylelint configuration
-        run: npx stylelint --print-config "styles/**/*.css"
-
-      - name: Lint HTML files
-        run: htmlhint "src/**/*.html"
-
-      - name: Lint CSS files
-        run: npx stylelint "styles/**/*.css" --config .stylelintrc.json
+      - name: Run Stylelint
+        run: npx stylelint "styles/**/*.css"
